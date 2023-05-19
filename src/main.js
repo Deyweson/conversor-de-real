@@ -1,31 +1,22 @@
 
-realParaDolar = (valor = 0) => (valor * dolar).toFixed(2);
-realParaEuro = (valor = 0) => (valor * euro).toFixed(2);
+conversao = (real, outraMoeda) => (real * outraMoeda).toFixed(2);
 
 function converter(){
     let entrada = document.getElementById("valorEntrada");
-    let valorEntrada = parseFloat(entrada.value)
+    let real = parseFloat(entrada.value)
 
     let tipoConversão = document.getElementById("opcoes").value
 
-    let valorConvertido;
+    let valorConvertido;   
 
-    if (tipoConversão === "realParaDolar"){
-        valorConvertido = realParaDolar(valorEntrada)
-    } else if (tipoConversão === "realParaEuro"){
-        valorConvertido = realParaEuro(valorEntrada)
+    switch(tipoConversão){
+        case "realParaDolar":
+            valorConvertido = conversao(real, dolar)
+            break;
+        case "realParaEuro":
+            valorConvertido = conversao(real, euro)
+            break;
     }
 
     document.querySelector("#text").innerHTML = `$ ${valorConvertido}`
 }
-
-
-
-
-
-
-
-
-
-
-
