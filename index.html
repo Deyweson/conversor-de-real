@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Converso de Moedas</title>
 </head>
 <body>
-    <section class="container">
+    <div>   
+        <header class="title">
+            <h1>Conversor de Real</h1>
+        </header> 
+        <section class="areaDeConversao">
+            <input type="text" value="0" class="entrada" id="valorEntrada" >
 
-        <div class="main">
-
-            <h1 class="title">Conversor de Moedas</h1>
-
-            <input type="number" id="numb" class="numb" placeholder="Digite o valor">
-
-            <button class="convert-button" onclick="getNumber()">Converter</button>
-
-            <div class="converted-container">
-                <p class="converted-title">resultado:</p>
-
-                <p id="converted-number">$0</p>
-            </div>
-        </div>
-    </section>
-    <script src="index.js"></script>
-
+            <select name="opcoes de conversao" id="opcoes" class="opcoe">
+                <option value="realParaDolar">Real -> Dolar</option>
+                <option value="realParaEuro">Real -> Euro</option>
+            </select>
+            <button class="botao" onclick="converter()" >Converter 💱</button>
+            <p class="convercao" id="text">$ 0</p>
+        </section>
+    </div>
+    <script src="./src/api-cotacao.js"></script>
+    <script src="./src/main.js"></script>
+    
 </body>
-
 </html>
