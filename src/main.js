@@ -1,5 +1,5 @@
 
-conversao = (real, outraMoeda) => (real * outraMoeda).toFixed(2);
+conversao = (real, outraMoeda) => (real / outraMoeda).toFixed(2);
 
 function converter(){
     let entrada = document.getElementById("valorEntrada");
