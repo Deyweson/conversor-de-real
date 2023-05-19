@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -12,14 +14,29 @@ body{
     height: 100vh;
 
     border: 1px solid black;
+
+    font-family: 'Ubuntu', sans-serif;
+
+    background-image: linear-gradient(rgb(109, 109, 199),gray)
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+.title{
+    font-size: 1.2rem;
 }
 
 
 .areaDeConversao{
+    background-color: white;
     border: 1px solid black;
     border-radius: 20px;
     width: 20em;
-    margin:10px 0px 20px 10px;
+    margin:0 0px 20px 0;
     text-align: center;
 }
 .entrada{
