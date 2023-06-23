@@ -1,22 +1,28 @@
+document.addEventListener('DOMContentLoaded', () => {
 
-conversao = (real, outraMoeda) => (real / outraMoeda).toFixed(2);
+    const botaoConversao = document.querySelector('.botao')
 
-function converter(){
-    let entrada = document.getElementById("valorEntrada");
-    let real = parseFloat(entrada.value)
+    botaoConversao.addEventListener('click', () => {
+        let entrada = document.querySelector('#valor-entrada')
+        let tratandoEntrada = parseFloat(entrada.value.toString().replace(',', '.'))
+        entrada = tratandoEntrada
 
-    let tipoConversão = document.getElementById("opcoes").value
+        const opcaoConvercao = document.querySelector('#opcoes').value
 
-    let valorConvertido;   
+        let saida = 0
 
-    switch(tipoConversão){
-        case "realParaDolar":
-            valorConvertido = conversao(real, dolar)
-            break;
-        case "realParaEuro":
-            valorConvertido = conversao(real, euro)
-            break;
-    }
+        switch (opcaoConvercao) {
+            case "dolar":
+                saida = (entrada * dolar).toFixed(2)
+                break;
+            case "euro":
+                saida = (entrada * euro).toFixed(2)
+                
+                break;
+        }
+        console.log(saida)
 
-    document.querySelector("#text").innerHTML = `$ ${valorConvertido}`
-}
+        document.querySelector('.saida').innerHTML = `<p>$${saida}</p>`
+    })
+})
+

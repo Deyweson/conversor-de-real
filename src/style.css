@@ -4,61 +4,52 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 body{
-    max-width: 1920px;
-    max-height: 1200px;
-    
     width: 100vw;
     height: 100vh;
-
-    border: 1px solid black;
-
-    font-family: 'Ubuntu', sans-serif;
-
-    background-image: linear-gradient(rgb(109, 109, 199),gray)
+    
 }
 
-.container{
+.app{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    
+    height: 100%;
 }
-.title{
-    font-size: 1.2rem;
-}
-
-
-.areaDeConversao{
-    background-color: white;
+.app-container{
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 0px 20px 0 20px;
     width: 20em;
-    margin:0 0px 20px 0;
-    text-align: center;
+}
+.titulo{
+    border-bottom: 1px solid black;
+    padding:20px;
+    margin-bottom: 20px;
 }
 .entrada{
-    display: block;
-    margin: 15px auto 5px auto;
-    padding: 10px;
-    font-size: 1rem;
-
+    padding-left: 20px;
+    margin: 20px 20px 20px 0;
 }
-.opcoe{
-    display: block;
-    margin: 5px auto;
-    padding: 10px;
+.entrada > input{
+    font-size: 1.2rem;
 }
-.botao{
-    padding: 10px;
-    margin: 5px auto;
+.area-de-convercao{
+    padding-left: 20px;
+    margin: 20px 20px 20px 0;
 }
-.convercao{
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 60%;
-    margin: 5px auto 20px auto;
-    padding: 10px;
+.area-de-convercao > select{
+    font-size: 1.2rem;
+}
+.area-de-convercao > button{
+    font-size: 1.2rem;
+}
+.saida{
+    padding-left: 20px;
+    margin: 20px 20px 20px 0;
+    font-size: 1.3rem;
 }
