@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 break;
         }
-        console.log(saida)
 
         document.querySelector('.saida').innerHTML = `<p>$${saida}</p>`
     })
