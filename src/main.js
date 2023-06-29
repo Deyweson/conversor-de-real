@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         switch (opcaoConvercao) {
             case "dolar":
-                saida = (entrada * dolar).toFixed(2)
+                saida = (entrada / dolar).toFixed(2)
                 break;
             case "euro":
-                saida = (entrada * euro).toFixed(2)
+                saida = (entrada / euro).toFixed(2)
                 
                 break;
         }
